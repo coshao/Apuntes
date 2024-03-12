@@ -1,0 +1,22 @@
+---
+- name: Prueba de Clon de repo privada de git
+  hosts: all
+  tasks:
+    - name: Mostrar la clave GitHub SSH
+      debug:
+        var: secure_key
+    - name: Clonando la repo privada de git
+      git:
+        repo: git@github.com:coshao/Apuntes.git
+        key_file: "{{ secure_key }}"
+        dest: /opt/contenido
+        accept_hostkey: yes
+        clone: yes
+        update: yes
+    - name: Capturar contenido en el la carpeta
+      command: "ls -l /opt/contenido"
+      register: salida_direc
+    - name: Mostrar salida de carpeta
+      debug:
+        var: salida_direc
+
