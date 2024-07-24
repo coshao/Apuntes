@@ -16,6 +16,8 @@ TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
 task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
 skipping: [rsazacdbvida01] => {"changed": false, "skip_reason": "Conditional result was False"}
 
+Problemas con el usuario:
+
 TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
 task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
 skipping: [rsazacstdsws01] => {"changed": false, "skip_reason": "Conditional result was False"}
