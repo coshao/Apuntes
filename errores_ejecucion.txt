@@ -11,3 +11,99 @@ fatal: [rsdcpitm01]: FAILED! => {"ansible_facts": {"discovered_interpreter_pytho
 ok: [rsdcatjboss02] => {"ansible_facts": {"returncode": "1-7-600", "returncode_message": "Pre-requisite was not met in the Sudo. Please check the documentation for more information."}, "changed": false}
 
 ok: [rssidds001] => {"ansible_facts": {"returncode": "1-7-600", "returncode_message": "Pre-requisite was not met in the Sudo. Please check the documentation for more information."}, "changed": false}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsazacdbvida01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsazacstdsws01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsazaccn001] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsazacj2ee14] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsazactdsws01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcaelb01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcaj2ee01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcaproecmhs01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcaproesbhs01] => {"changed": false, "skip_reason": "Conditional result was False"}
+META: role_complete for rsdcaproecmhs01
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcaproodmhs01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcatjboss02] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcatpsasapp2] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcauatsasbd01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcpappgir01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcpcm01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rsdcpelb01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rsdcpilmt01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rsdcpmqafl] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rsdcpprdmqafl] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rsdcpproecmhs01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rsdcpproesbhs01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rsdcpsyslog01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rsmibd01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rssbihs12] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rssbj2ee14] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rssbqm01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rssbqm03] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rssbtcat01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rssidds001] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rssiop01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rssisftp01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rssistdsws01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rssisusc01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rstadihs05] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rstadsrvtc01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rstanmon01] => {"changed": false, "skip_reason": "Conditional result was False"}
+skipping: [rstatappgir01] => {"changed": false, "skip_reason": "Conditional result was False"}
+
+TASK [Check for unreachable endpoint (Failed to authenticate the user)] ********
+task path: /tmp/awx_3968844_4buxqwmh/requirements_roles/ansible_role_connection_validator/tasks/os_specific/unix.yml:12
+skipping: [rstataxeihs01] => {"changed": false, "skip_reason": "Conditional result was False"}
