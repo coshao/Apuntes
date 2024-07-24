@@ -1,0 +1,9 @@
+Pre-requisite was not met in the Sudo
+[Check for unreachable endpoint (Failed to authenticate the user)]
+
+errores:
+fatal: [rsazacop01]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "ansible-core requires a minimum of Python2 version 2.7 or Python3 version 3.5. Current version: 2.6.6 (r266:84292, Aug  9 2016, 06:11:56) [GCC 4.4.7 20120313 (Red Hat 4.4.7-17)]"}
+
+fatal: [rsdcadcmdb01]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "ansible-core requires a minimum of Python2 version 2.7 or Python3 version 3.5. Current version: 2.6.6 (r266:84292, Jun 11 2019, 11:01:44) [GCC 4.4.7 20120313 (Red Hat 4.4.7-23)]"}
+
+fatal: [rsdcpitm01]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "ansible-core requires a minimum of Python2 version 2.7 or Python3 version 3.5. Current version: 2.6.5 (r265:79063, Jul 14 2010, 11:36:05) [GCC 4.4.4 20100630 (Red Hat 4.4.4-10)]"}
