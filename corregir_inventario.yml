@@ -22,7 +22,7 @@
       loop_control:
         label: "Corrigiendo host: {{ item.key }} -> IP: {{ item.value }}"
 
-      - name: Validación final de conectividad
+    - name: Validación final de conectividad
       ansible.builtin.ping:
       delegate_to: "{{ item.value }}"
       loop: "{{ hosts_y_ips_correctas | dict2items }}"
