@@ -1,0 +1,33 @@
+---
+- name: Corrección dinámica de IPs post-sincronización CMDB
+  hosts: localhost
+  gather_facts: false
+  vars:
+    inventario_objetivo: "Inventario Casa"
+    hosts_y_ips_correctas: {}
+  tasks:
+    - name: Validar que se hayan recibido datos para procesar
+      ansible.builtin.fail:
+        msg: "El diccionario 'hosts_y_ips_correctas' está vacío. Revisa las Extra Vars de la plantilla."
+      when: hosts_y_ips_correctas | length == 0
+
+    - name: Actualizar ansible_host en AAP para la lista de servidores
+      ansible.controller.host:
+        name: "{{ item.key }}"
+        inventory: "{{ inventario_objetivo }}"
+        variables:
+          ansible_host: "{{ item.value }}"
+        state: present
+      loop: "{{ hosts_y_ips_correctas | dict2items }}"
+      loop_control:
+        label: "Corrigiendo host: {{ item.key }} -> IP: {{ item.value }}"
+
+    - name: Validación de conectividad (Ping de estado)
+      ansible.builtin.ping:
+      delegate_to: "{{ item.key }}"
+      vars:
+        ansible_host: "{{ item.value }}"
+      loop: "{{ hosts_y_ips_correctas | dict2items }}"
+      loop_control:
+        label: "Validando conectividad con: {{ item.key }} ({{ item.value }})"
+      ignore_errors: true
