@@ -12,7 +12,7 @@
       when: hosts_y_ips_correctas | length == 0
 
     - name: Actualizar ansible_host en AAP para la lista de servidores
-      ansible.controller.host:
+      awx.awx.host:
         name: "{{ item.key }}"
         inventory: "{{ inventario_objetivo }}"
         variables:
