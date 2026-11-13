@@ -1,0 +1,22 @@
+---
+- name: "Fase 3: Revocar llave publica antigua"
+  hosts: all
+  gather_facts: false
+  vars:
+    effective_user: "{{ target_user | default(ansible_user) }}"
+
+  pre_tasks:
+    - name: Verificar que se proporciono la variable old_public_key
+      ansible.builtin.assert:
+        that:
+          - old_public_key is defined
+          - old_public_key | trim | length > 0
+        fail_msg: "Debe definir la llave publica antigua en el Survey o Extra Vars."
+      run_once: true
+
+  tasks:
+    - name: Eliminar unicamente la llave publica antigua
+      ansible.posix.authorized_key:
+        user: "{{ effective_user }}"
+        state: absent
+        key: "{{ old_public_key | trim }}"
