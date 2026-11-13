@@ -1,0 +1,35 @@
+---
+- name: "Fase 1: Validar llave antigua e inyectar nueva llave publica"
+  hosts: all
+  gather_facts: false
+  serial: "{{ batch_size | default('100%') }}"
+  vars:
+    effective_user: "{{ target_user | default(ansible_user) }}"
+
+  pre_tasks:
+    - name: Verificar que se proporciono la variable new_public_key
+      ansible.builtin.assert:
+        that:
+          - new_public_key is defined
+          - new_public_key | trim | length > 0
+        fail_msg: "Debe definir la llave publica nueva en el Survey o Extra Vars."
+      run_once: true
+
+    - name: Auditar cumplimiento AV.1.7.2 (>= 3072 bits RSA o ED25519)
+      ansible.builtin.shell: |
+        printf '%s\n' "{{ new_public_key | trim }}" | ssh-keygen -l -f -
+      delegate_to: localhost
+      become: false
+      run_once: true
+      register: key_check
+      changed_when: false
+      failed_when: >
+        key_check.rc != 0 or
+        ('RSA' in key_check.stdout and (key_check.stdout.split()[0] | int) < 3072)
+
+  tasks:
+    - name: Inyectar nueva llave publica en authorized_keys
+      ansible.posix.authorized_key:
+        user: "{{ effective_user }}"
+        state: present
+        key: "{{ new_public_key | trim }}"
