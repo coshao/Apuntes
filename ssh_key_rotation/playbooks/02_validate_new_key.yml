@@ -1,0 +1,13 @@
+---
+- name: "Fase 2: Validar acceso exclusivo con la nueva credencial"
+  hosts: all
+  gather_facts: false
+  vars:
+    effective_user: "{{ target_user | default(ansible_user) }}"
+
+  tasks:
+    - name: Comprobar conectividad SSH y usuario efectivo
+      ansible.builtin.command: whoami
+      register: whoami_out
+      changed_when: false
+      failed_when: whoami_out.stdout | trim != effective_user
